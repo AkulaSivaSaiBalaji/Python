@@ -80,3 +80,13 @@ while num<5:
 4)number of vowels in a string
 5)count the numer of words in a string
 '''
+
+a=list(map(str, input("enter your string: ").split()))
+print(f'Total Number of words in given string: {len(a)}')
+
+a=153
+while a>0:
+    b=a%10
+    c=b**3
+    a=a//10
+    print(c)
