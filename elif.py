@@ -81,15 +81,3 @@ else:
     print('marks out of range')
 
 '''
-
-#prime number program
-num=int(input('Enter a number:'))
-if num>1:
-    for i in range(2,num):
-        if num%i==0: #every number is divisible by 1 and itself so performed a reverse logic
-            print("not a prime number!!!")
-            break #stops the loop of finding which numbers were dividing given number first one is enough
-    else:
-        print("prime number!!!")
-else:
-    print("enter any number other than one")
