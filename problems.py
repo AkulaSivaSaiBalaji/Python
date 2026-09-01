@@ -145,7 +145,7 @@ for i in range(b):
         gratest_number=a[i]
 print(gratest_number)
 '''
-
+'''
 #perfect number 
 num=int(input('enter your number to check if it is a perfect number or not: '))
 added_num=0
@@ -156,3 +156,49 @@ if num==added_num:
     print(f'{num} is a perfect number')
 else:
     print(f'{num} is not a perfect number')
+'''
+'''
+a=[2,1,6,8,0.5]
+b=a[0]
+for i in range(0,len(a)):
+    if b>a[i]:
+        b=a[i]
+print(b)
+'''
+'''
+#fibnocci series
+c=int(input('Enter the range of fibnocci series:'))
+a=0
+b=1
+print(a,b,end=' ')
+for i in range(c):
+    d=a+b
+    a=b
+    b=d
+    print(d,end=' ')
+'''
+'''
+#prime numner until given range
+a=int(input("enter the range of prime number you wish to print: "))
+print(1)
+for n in range(1,a+1):
+    count=0
+    for i in range(1,n+1):
+        if n%i==0:
+            count=count+1
+    if count==2:
+        print(n)
+'''
+'''
+s='python is a simple language'
+vowels='aeiou '
+count=0
+for a in s:
+    if a not in vowels:
+        count+=1
+print(count)
+'''
+for i in range(1,6):
+    for j in range(1,i+1):
+        print('*',end='')
+    print()
