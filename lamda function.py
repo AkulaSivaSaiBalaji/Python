@@ -60,6 +60,7 @@ from functools import reduce #should be imported to use reduce function.
 nums=[1,2,3,4,5]
 add=reduce(lambda a,b:a+b,nums)#reduce function is used to perform the operation on all the elements of the iterable and return a single value.
 print(add)
+print(type(add))
 add=reduce(lambda a,b:a*b,range(1,6))#reduce function is used to perform the operation on all the elements of the iterable and return a single value.
 print(add)
 '''
