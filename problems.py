@@ -197,8 +197,17 @@ for a in s:
     if a not in vowels:
         count+=1
 print(count)
-'''
+
 for i in range(1,6):
     for j in range(1,i+1):
         print('*',end='')
     print()
+'''
+def add(a,b):
+    print(a+b)
+
+def sub(a,b):
+    print(a-b)
+
+def pow(a,b):
+    print(a**b)
