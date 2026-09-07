@@ -51,7 +51,7 @@ print(today.hour)
 #task: 
 import random
 number=random.randint(1,100)
-print(number)
+#print(number)
 attempts=3
 first_prize=500
 second1_prize=300
