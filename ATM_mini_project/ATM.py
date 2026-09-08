@@ -7,9 +7,10 @@ user_details={
     'IFSC':'KKBK0008454',
     'ACC_Balance': 1000
 }
+import random
 attempts=3
 while attempts>0:
-    user_pin=int(input('Enter your ATM_PIN:'))
+    user_pin=int(input('Enter your ATM_PIN: '))
     if user_details['ATM_PIN']==user_pin:
         print("WELCOME TO ATM")
         print("==============")
@@ -33,7 +34,7 @@ while attempts>0:
             print(f"{user_details['ACC_Balance']} is your account balance")
 
         elif user_choice==2:
-            deposit=int(input("Enter you deposit amount:"))
+            deposit=int(input("Enter you deposit amount: "))
             if deposit%100==0:
                 user_details['ACC_Balance']+=deposit
                 print(f"Your Acc_Balance is {user_details['ACC_Balance']} after {deposit} amount added")
@@ -41,16 +42,21 @@ while attempts>0:
                 print("Enter amount in multiples of 100 200 500")
 
         elif user_choice==4:
-            new_pin=int(input("Enter your new 4 digit-pin"))
-            new_pin=str(new_pin)
-            new_pin_list=list(new_pin)
-            if len(new_pin_list)==4:
-                new_pin=int(new_pin)
-                user_details['ATM_PIN']=new_pin
-                print(f"New pin generated - {user_details['ATM_PIN']}")
+            otp=random.randint(1000,9999)
+            print(f"otp : {otp} ")
+            user_otp=int(input("Enter the above OTP: "))
+            if otp==user_otp:
+                new_pin=int(input("Enter your new 4 digit-pin"))
+                new_pin=str(new_pin)
+                new_pin_list=list(new_pin)            
+                if len(new_pin_list)==4:
+                    new_pin=int(new_pin)
+                    user_details['ATM_PIN']=new_pin
+                    print(f"New pin generated - {user_details['ATM_PIN']}")
+                else:
+                    print("invalid new pin")
             else:
-                print("invalid new pin")
-        
+                print("Invalid OTP")
         else:
             print("Invalid choice")
             break
