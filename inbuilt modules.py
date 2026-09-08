@@ -47,7 +47,7 @@ today=datetime.today()
 print(today)
 print(today.month)
 print(today.hour)
-'''
+
 #task: 
 import random
 number=random.randint(1,100)
@@ -74,3 +74,4 @@ while attempts>0:
         print("invalid number")
         break
     attempts-=1
+'''
