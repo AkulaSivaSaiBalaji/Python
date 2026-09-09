@@ -1,0 +1,21 @@
+1. Create a dictionary to store the user's ATM and account details.
+
+2. Set the number of PIN attempts to 3.
+
+3. Ask the user to enter the ATM PIN.
+4. Check whether the entered PIN is correct.
+   - If correct, allow the user to enter the ATM.
+   - If incorrect, reduce the attempts.
+   - If all 3 attempts are wrong, block the card.
+
+5. Display the ATM menu with options for withdrawal, deposit, balance check, and PIN change.
+
+6. For withdrawal, take the amount, validate it, check the balance, and subtract the amount.
+
+7. For deposit, take the amount, validate it, and add it to the balance.
+
+8. For balance check, display the current account balance.
+
+9. For PIN change, generate an OTP, verify it, take a new 4-digit PIN, and update the PIN.
+
+10. Display an error message if the user enters an invalid option or invalid amount.
