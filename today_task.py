@@ -101,8 +101,8 @@ class HDFC(RBI):
 
     @classmethod
     def hdfc_cash(cls):
-        print(f"Available cash in HDFC is ₹{cls.cash}")
-        print(f"Total cash with RBI and HDFC is ₹{RBI.cash + cls.cash}")
+        print(f"Available cash in HDFC is {cls.cash}")
+        print(f"Total cash with RBI and HDFC is {RBI.cash + cls.cash}")
 
 
 
