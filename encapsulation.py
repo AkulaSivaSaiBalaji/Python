@@ -112,4 +112,71 @@ class DerivedClass(BaseClass):
     """Derived class"""
     statements
     .............
+
+
+#social media login example
+class Users:
+    """Users details"""
+    def __init__(self,fname,lname):
+        self.fname=fname
+        self.lname=lname
+    #initial case we just display
+    def full_name(self):
+        return self.fname+" "+self.lname
+
+class User_v1(Users):
+    """Updating user name"""
+    def update_name(self,full_name):
+        return full_name.title()
+
+user1=User_v1("siva sai","balaji")
+print(user1.full_name()) #inherited method from base class
+print(user1.update_name("siva sai balaji")) #updated name
 '''
+
+#task
+class SamosaSecurityOfficer:
+
+    def __init__(self, name, samosa_count, secret_samosa_code):
+        # Public attribute
+        self.name = name
+
+        # Protected attribute
+        self._samosa_count = samosa_count
+
+        # Private attribute
+        self.__secret_samosa_code = secret_samosa_code
+
+    # Protected attribute - Getter
+    def get_samosa_count(self):
+        return self._samosa_count
+
+    # Protected attribute - Setter
+    def set_samosa_count(self, count):
+        self._samosa_count = count
+
+    # Private attribute - Getter
+    def get_secret_samosa_code(self):
+        return self.__secret_samosa_code
+
+    # Private attribute - Setter
+    def set_secret_samosa_code(self, code):
+        self.__secret_samosa_code = code
+
+#public
+
+officer = SamosaSecurityOfficer("Yashaswi",10,"SAMOSA-007")
+print(f"Officer Name: {officer.name}")
+officer.name = "Super Yashaswi"
+print(f"Updated Name: {officer.name}")
+print(f"Samosas in Security: {officer.get_samosa_count()}")
+officer.set_samosa_count(25)
+print(f"Updated Samosas: {officer.get_samosa_count()}")
+
+
+
+# private
+
+print(f"Secret Code: {officer.get_secret_samosa_code()}")
+officer.set_secret_samosa_code("SAMOSA-999")
+print(f"Updated Secret Code: {officer.get_secret_samosa_code()}")
